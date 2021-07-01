@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackathons</title>
+    <style>
+      body {
+        padding: 50px;
+        font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+      }
+
+      li{
+        list-style-type: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Upcoming Hackathons</h1>  
+      <% hackathons.forEach(function(hackathon){ %>
+        <ul>
+          <li style="list-style-type: circle;" ><b>Name: <%= hackathon.name %></b> </li>
+          <li><a href="<%= hackathon.link %>" class="btn btn-primary" role="button"><%= hackathon.name %></a></li>
+          <li><b>Start Date: </b> <%= hackathon.startDate %></li>
+          <li><b>End Date: </b><%= hackathon.endDate %></li>
+        </ul>
+      <% }) %>
+  </body>
+</html>
